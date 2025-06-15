@@ -116,10 +116,6 @@
     <p>
       Esperamos vocês com trajes típicos e muita animação!  
     </p>
-    <p>
-      Com carinho,<br>
-      <strong>Professora Hermínia Regina</strong>
-    </p>
 
     <!-- Vídeo da música incorporado -->
     <div style="margin-top: 30px;">
