@@ -5,35 +5,54 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Cadastro</title>
   <style>
-    /* ===== Estilo Geral ===== */
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #464444; /* cinza claro */
-      color: #000; /* texto preto padrão */
-      padding: 40px 20px;
+      background: #bcc1fa;
+      color: #000;
+      margin: 0;
+      padding: 70px 20px 40px;
       max-width: 500px;
-      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
     }
 
+    /* ===== HEADER PEQUENO ===== */
+    header {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      background-color: #000;
+      color: #0078d7;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    /* ===== Título principal ===== */
     h1 {
       text-align: center;
-      color: #0078d7; /* azul moderno */
-      margin-bottom: 30px;
+      color: #0078d7;
+      margin-bottom: 25px;
       font-weight: 700;
-      letter-spacing: 0.5px;
+      font-size: 1.5rem;
     }
 
     /* ===== Botão Refazer ===== */
     #refazerCadastro {
       display: block;
-      margin: 0 auto 30px auto;
-      padding: 10px 18px;
+      margin: 0 auto 25px auto;
+      padding: 8px 14px;
       border: none;
       border-radius: 8px;
-      background-color: #000; /* preto */
-      color: #0078d7; /* texto azul */
+      background-color: #000;
+      color: #0078d7;
       cursor: pointer;
       transition: all 0.3s ease;
+      font-size: 0.9rem;
     }
 
     #refazerCadastro:hover {
@@ -43,41 +62,58 @@
 
     /* ===== Formulário ===== */
     form {
-      background-color: #807979;
-      padding: 25px;
+      background-color: #545151;
+      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     }
 
     label {
       display: block;
-      margin-top: 14px;
+      margin-top: 12px;
       font-weight: 600;
-      color: #0078d7; /* azul nas labels */
+      color: #0078d7;
+      font-size: 0.95rem;
     }
 
     input {
       width: 100%;
-      padding: 10px;
-      margin-top: 6px;
-      background-color: #f9f9f9;
+      padding: 8px;
+      margin-top: 5px;
+      background-color: #f8f3f3;
       border: 1px solid #ccc;
       border-radius: 6px;
       color: #000;
       box-sizing: border-box;
       transition: border-color 0.3s ease, background-color 0.3s ease;
+      font-size: 0.95rem;
     }
 
     input:focus {
       outline: none;
-      border-color: #0078d7; /* borda azul ao focar */
+      border-color: #0078d7;
       background-color: #f0f8ff;
     }
- 
-     /* ===== Botão Enviar ===== */
+
+    /* ===== Mensagens ===== */
+
+
+    #msg.error {
+      color: #d32f2f;
+      background-color: #fff0f0;
+      border: 1px solid #f0bcbc;
+    }
+
+    #msg.success {
+      color: #0078d7;
+      background-color: #e7f3ff;
+      border: 1px solid #b5d9ff;
+    }
+
+    /* ===== Botão Enviar ===== */
     button[type="submit"] {
-      margin-top: 20px;
-      padding: 12px;
+      margin-top: 16px;
+      padding: 10px;
       width: 100%;
       background-color: #000;
       color: #0078d7;
@@ -86,6 +122,7 @@
       font-weight: 600;
       cursor: pointer;
       transition: background-color 0.3s, transform 0.2s;
+      font-size: 1rem;
     }
 
     button[type="submit"]:hover {
@@ -99,6 +136,11 @@
   </style>
 </head>
 <body>
+
+  <!-- ===== HEADER PEQUENO ===== -->
+  <header>Turma</header>
+
+  <!-- ===== CONTEÚDO ===== -->
   <h1>Cadastre-se</h1>
 
   <button id="refazerCadastro">Refazer cadastro</button>
